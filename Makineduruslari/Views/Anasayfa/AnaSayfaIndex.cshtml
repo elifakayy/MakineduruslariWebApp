@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="container-fluid">
+    <main class="container-row ">
+
+
+        <div class="nav py-5 border-bottom-dark body">
+            <div class="container">
+                <div class="row" style="margin-bottom:50px;">
+                    <div class="col-12 d-grid gap-2 btn-lg d-md-flex justify-content-md-center">
+                        <input class="btn btn-primary" value="DURUŞLAR" onclick="@("window.location.href='" + @Url.Action("DuruslarListe", "Analiz") + "'");" />
+                        
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-6 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">MAKİNELER</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                @*<a href="#" class="btn btn-primary">Makineyi incele</a>*@
+                                <input class="btn btn-primary" value="Makineleri incele" onclick="@("window.location.href='" + @Url.Action("MakineBilgisi", "Analiz") + "'");" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-6 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">PERSONELLER</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                @*<a href="#" class="btn btn-primary">Personeli incele</a>*@
+                                <input class="btn btn-primary" value="Personelleri incele" onclick="@("window.location.href='" + @Url.Action("PersonelBilgisi", "Analiz") + "'");" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-6 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">ARIZALAR</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                               
+                                <input class="btn btn-primary" value="Arızaları incele" onclick="@("window.location.href='" + @Url.Action("ArizaBilgisi", "Analiz") + "'");" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-6 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">PARÇALAR</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                @*<a  href="/Analiz/Parca" class="Button">PArçayı incele</a>*@
+                                <input class="btn btn-primary" value="Parçaları incele" onclick="@("window.location.href='" + @Url.Action("ParcaBilgisi", "Analiz") + "'");" />
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    En çok problem çıkaran makine ile hangi personel çalışıyor ?
+                                </h5>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                                    <input class=" btn btn-outline-primary" value="İNCELE" onclick="@("window.location.href='" + @Url.Action("ParcaBilgisi", "Analiz") + "'");" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">En çok duruş süresine sahip makinenin hangi parçasında en çok arıza çıkıyor ? </h5>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                
+                                <input class=" btn btn-outline-primary" value="İNCELE" onclick="@("window.location.href='" + @Url.Action("ParcaBilgisi", "Analiz") + "'");" />
+                                </div>
+                                </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 ">
+                        <div class="card">
+							<div class="card-body">
+								<h5 class="card-title">
+									Hangi makinede hangi arıza en çok çıkıyor ?
+								</h5>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                
+                                <input class=" btn btn-outline-primary" value="İNCELE" onclick="@("window.location.href='" + @Url.Action("ParcaBilgisi", "Analiz") + "'");" />
+                                </div>
+                           
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+</div>
