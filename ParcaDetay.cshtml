@@ -1,0 +1,72 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model IEnumerable<Makineduruslari.Models.DurusModel>
+
+<div class="container-fluid">
+    <main class="container-row ">
+
+
+
+        <div class="nav py-5 border-bottom-dark body">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-12 ">
+
+
+
+                        <table id="table" class="table" style="font-size=5; ">
+                            <thead class="table-dark" style="height:10px; ">
+                                <tr>
+
+                                    <th>@Html.DisplayNameFor(model => model.makine_adi)</th>
+                                    <th>Stok Kodu</th>
+                                    <th>@Html.DisplayNameFor(model => model.baslangic_tarihi)</th>
+                                    <th>@Html.DisplayNameFor(model => model.bitis_tarihi)</th>
+                                    <th>Personel Adı</th>
+                                    <th>Arıza Grup 2</th>
+                                    <th>Arıza Grup 3</th>
+                                    <th>Durus Süresi</th>
+
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>@Html.DisplayFor(modelItem => item.makine_adi)</td>
+                                        <td>@item.Name</td>
+                                        <td>@Html.DisplayFor(modelItem => item.baslangic_tarihi)</td>
+                                        <td>@Html.DisplayFor(modelItem => item.bitis_tarihi)</td>
+                                        <td>@item.adi_soyadi</td>
+                                        <td>@item.ariza_nedeni</td>
+                                        <td>@item.arizayeri</td>
+
+                                        <td>@item.durus_suresi</td>
+
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+    </main>
+</div>

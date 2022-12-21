@@ -1,0 +1,111 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}@*
+@model IEnumerable<Makineduruslari.Models.ArizalarModel>*@
+@model ArizalarModel
+<div class="container-fluid">
+    <main class="container-row ">
+
+
+
+
+        <div class="nav py-5 border-bottom-dark body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">En Çok Duruş yapan arıza</h5>
+                                <p class="card-text"> </p>
+                                <a href="#" class="btn btn-primary">Parçayı incele</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">En Çok Arıza Çıkaran Parça</h5>
+                                <p class="card-text"> </p>
+                                <a href="#" class="btn btn-primary">Parçayı incele</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-6 ">
+
+                        <table class="table" style="font-size=5; ">
+                            <thead class="table-dark" style="height:10px; ">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Ariza Adı</th>
+                                    <th>Duruş Süresi </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                                @foreach (var item in Model.ArizaModel)
+                                {
+                                    <tr style="font-size:medium;">
+                                        <td>@item.id</td>
+                                        <td>@item.ariza2</td>
+                                        <td>@item.durussuresi</td>
+
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="col-6 ">
+
+                        <table class="table" style="font-size=5; ">
+                            <thead class="table-dark" style="height:10px; ">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Arizalı Parçanın Adı</th>
+                                    <th>Duruş Süresi </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                                @foreach (var item in Model.ArizaParcaModel)
+                                {
+                                    <tr style="font-size:medium;">
+                                        <td>@item.id</td>
+                                        <td>@item.parcaadi</td>
+                                        <td>@item.durussuresi</td>
+                                        
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </main>
+</div>

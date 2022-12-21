@@ -1,0 +1,92 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Makineduruslari.Models.PersonelModel>
+
+
+<div class="container-fluid">
+    <main class="container-row ">
+
+
+
+        <!-- Navbar-->
+
+
+        <div class="nav py-5 border-bottom-dark body">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-12 ">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">En uzun duruş girişi yapan personel</h5>
+                                <p class="card-text"> </p>
+                                <a href="#" class="btn btn-primary">Personeli incele</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-6 ">
+
+                        <table class="table" style="font-size=5; ">
+                            <thead class="table-dark" style="height:10px; ">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Personel Adı</th>
+                                    <th>Duruş Süresi </th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                                @foreach (var item in Model)
+                                {
+                                    <tr style="font-size:medium;" >
+                                        <td>@item.id</td>
+                                        <td>@item.personeladi</td>
+                                        <td>@item.durussuresi</td>
+                                        <td>
+                                            <input class=" btn btn-outline-success" value="İNCELE" onclick="@("window.location.href='" + @Url.Action("PersonelDetay", "Analiz", new { personelinadi =  @item.personeladi  } )  + " '");" />
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="col-6 ">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                PERSONELLER
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                @foreach (var item in Model)
+                                {
+                                    <ul style="font-size:small;">
+                                    <li><a class="dropdown-item" href="#">@item.personeladi</a></li>
+                                    </ul>
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </main>
+</div>
